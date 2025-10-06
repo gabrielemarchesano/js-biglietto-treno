@@ -71,26 +71,23 @@ const over65Sales = 40 / 100;
 // 2.1.2
 let totalTicketPrice;
 
+let salesText = "";
+
 // 2.2
 if(age < 18){ // 2.2.1
   //Inserisco nella variabile totalTicketPrice il calcolo per lo sconto under 18
   totalTicketPrice = ticketPrice - (ticketPrice  * under18Sales);
-  //Stampo per essere sicuro che la variabile abbia il valore calcolato esatto
-  console.log(totalTicketPrice);
-  //Stampo un messaggio per l'utente - utilizzo il metodo .toFixed(2) per mostrare solo due cifre decimali dopo la virgola
-  console.log("Prezzo totale del biglietto con lo sconto under 18: " + totalTicketPrice.toFixed(2) + "€");
+  //Inserisco nella variabile salesText una stringa personalizzata
+  salesText = " con lo sconto under 18";
 } else if(age > 65){ // 2.3
   //Inserisco nella variabile totalTicketPrice il calcolo per lo sconto over 65
   totalTicketPrice = ticketPrice - (ticketPrice  * over65Sales);
-  //Stampo per essere sicuro che la variabile abbia il valore calcolato esatto
-  console.log(totalTicketPrice);
-  //Stampo un messaggio per l'utente - utilizzo il metodo .toFixed(2) per mostrare solo due cifre decimali dopo la virgola
-  console.log("Prezzo totale del biglietto con lo sconto over 65: " + totalTicketPrice.toFixed(2) + "€");  
+  //Inserisco nella variabile salesText una stringa personalizzata
+  salesText = " con lo sconto over 65" 
 } else { // 2.4
   //Inserisco nella variabile totale il prezzo del biglietto non scontato
   totalTicketPrice = ticketPrice;
-  //Stampo per essere sicuro che la variabile abbia il valore calcolato esatto
-  console.log(totalTicketPrice);
-  //Stampo un messaggio per l'utente - utilizzo il metodo .toFixed(2) per mostrare solo due cifre decimali dopo la virgola
-  console.log("Prezzo totale del biglietto: " + totalTicketPrice.toFixed(2) + "€");
 }
+
+//Stampo un messaggio per l'utente - utilizzo il metodo .toFixed(2) per mostrare solo due cifre decimali dopo la virgola
+console.log(`Prezzo totale del biglietto${salesText}: ${totalTicketPrice.toFixed(2)}€`);
