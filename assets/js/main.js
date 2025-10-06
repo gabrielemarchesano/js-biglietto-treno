@@ -77,4 +77,8 @@ if(age < 18){ // 2.2.1
   totalTicketPrice = ticketPrice - (ticketPrice  * over65Sales);
   console.log(totalTicketPrice);
   console.log("Prezzo totale del biglietto con lo sconto over 65: " + totalTicketPrice.toFixed(2) + "€");  
+} else {
+  totalTicketPrice = ticketPrice;
+  console.log(totalTicketPrice);
+  console.log("Prezzo totale del biglietto: " + totalTicketPrice.toFixed(2) + "€");
 }
