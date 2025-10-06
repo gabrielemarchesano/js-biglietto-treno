@@ -16,18 +16,29 @@ TOOLS:
 */
 
 // 1. Il programma dovrà chiedere all'utente il numero di chilometri che vuole percorrere e l'età del passeggero.
+  
   // 1.1 Creo una variabile per i chilometri
+  
   // 1.2 Creo una variabile per l'età del passeggero
 
+/***********************************************************************************/
+
+
 // 2 Sulla base di queste informazioni dovrà calcolare il prezzo totale del viaggio
+  
   // 2.1 Calcolo il prezzo del biglietto in base ai km (0.21€ al km)
+    // 2.1.1 Creo due variabili per gli sconti under 18 e over 65
+    // 2.1.2 Creo una variabile vuota per il costo totale del biglietto
+  
   // 2.2 Verifico se l'età del passeggero è sotto i 18 anni
     // 2.2.1 Se è sotto i 18 anni, calcolo lo sconto del 20% al biglietto e lo stampo
+  
   // 2.3 Verifico se l'età del passeggero è sopra i 65 anni
     // 2.3.1 Se è sopra i 65 anni, applico lo sconto del 40% al biglietto e lo stampo
-  // 2.4 Se il passeggero non è minorenne e non è over 65, stampo il prezzo non scontato del biglietto
+  
+    // 2.4 Se il passeggero non è minorenne e non è over 65, stampo il prezzo non scontato del biglietto
 
-// 3 Stampo biglietto
+/***********************************************************************************/
 
 // 1.
 // 1.1
@@ -42,3 +53,24 @@ const age = Number(prompt("Quanti anni hai?"));
 console.log(age);
 console.log("Hai: " + age + " anni");
 
+// 2
+// 2.1
+const ticketTariff = 0.21;
+console.log(ticketTariff);
+console.log("La tariffa è di: " + ticketTariff + "€ al km");
+const ticketPrice = ticketTariff * kilometers;
+console.log("Il prezzo del biglietto è: " + ticketPrice + "€");
+
+// 2.1.1
+const under18Sales = 20 / 100;
+const over65Sales = 40 / 100;
+
+// 2.1.2
+let totalTicketPrice;
+
+// 2.2
+if(age < 18){ // 2.2.1
+  totalTicketPrice = ticketPrice - (ticketPrice  * under18Sales);
+  console.log(totalTicketPrice);
+  console.log("Prezzo totale del biglietto con lo sconto: " + totalTicketPrice.toFixed(2) + "€");
+}
