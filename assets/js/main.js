@@ -27,4 +27,18 @@ TOOLS:
     // 2.3.1 Se è sopra i 65 anni, applico lo sconto del 40% al biglietto e lo stampo
   // 2.4 Se il passeggero non è minorenne e non è over 65, stampo il prezzo non scontato del biglietto
 
-  // 3 Stampo biglietto
+// 3 Stampo biglietto
+
+// 1.
+// 1.1
+const kilometers = Number(prompt("Inserisci quanti chilometri vuoi percorrere"));
+//Stampo la variabile per essere sicuro che il valore sia corretto
+console.log(kilometers);
+console.log("Vuoi percorrere: " + kilometers + " km");
+
+// 1.2
+const age = Number(prompt("Quanti anni hai?"));
+//Stampo la variabile per essere sicuro che il valore sia corretto
+console.log(age);
+console.log("Hai: " + age + " anni");
+
